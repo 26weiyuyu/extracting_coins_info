@@ -56,7 +56,7 @@ This repository contains a suite of Python scripts for scraping, classifying, an
 Install with:
 ```bash
 pip install -r requirements.txt
-
+```
 ---
 
 ## Notes
