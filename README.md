@@ -8,22 +8,33 @@ This repository contains a suite of Python scripts for scraping, classifying, an
 
 1. **Scrape CoinMarketCap Coin List**  
    `scrape_coin_list.py`  
-   - Extracts coin names and their CoinMarketCap links.
+   - Extracts coin names and their CoinMarketCap links.  
    - Saves to: `your output file`
 
 2. **Get First Token Trading Date**  
    `scrape_token_dates.py`  
-   - Uses Selenium to hover over CoinMarketCap charts and find the first date with price data.
+   - Uses Selenium to hover over CoinMarketCap charts and find the first date with price data.  
    - Saves to: `your output file`
 
 3. **Extract Website and Social Links**  
    `extract_all_links.py`  
-   - Extracts all available external links from each coin’s CoinMarketCap page (website, GitHub, whitepaper, explorers, etc.).
+   - Extracts all available external links from each coin’s CoinMarketCap page (website, GitHub, whitepaper, explorers, etc.).  
    - Saves to: `your output file`
 
-4. **Merge Metadata with OSS Info**  
+4. **Clean and Deduplicate Extracted Links**  
+   `cleaned_up_links.py`  
+   - Cleans and reclassifies extracted links (e.g., GitHub, Whitepaper, Explorers) into a consistent format.  
+   - Filters out noise like repeated CoinMarketCap social links and consolidates related columns.  
+   - Output is a cleaned version of the extracted file.
+
+5. **Merge Across Multiple Files (Optional)**  
+   `merge_all_links.py`  
+   - If you scraped in batches (e.g., 1–1000, 1001–2000), use this script to merge cleaned files.  
+   - Groups by project name and keeps the first valid non-empty value per column.
+
+6. **Merge Metadata with OSS Info**  
    `merge_project_data.py`  
-   - Combines token dates, CoinMarketCap metadata, and GitHub OSS links into one final file.
+   - Combines token dates, CoinMarketCap metadata, and GitHub OSS links into one final file.  
    - Saves to: `your output file`
 
 ---
