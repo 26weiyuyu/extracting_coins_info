@@ -28,7 +28,7 @@ This repo contains Python scripts to extract and compile metadata for cryptocurr
 
 ---
 
-## 📁 Example Output Columns
+## Example Output Columns
 
 | Column              | Description                                 |
 |---------------------|---------------------------------------------|
