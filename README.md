@@ -1,6 +1,6 @@
 # Crypto Project Metadata Collector
 
-This repo contains Python scripts to extract and compile metadata for cryptocurrency projects from CoinMarketCap. The final goal is to build a structured dataset with official websites, GitHub links, first token trading dates, and social media for each project.
+This repository contains a suite of Python scripts for scraping, classifying, and merging metadata about cryptocurrency projects from CoinMarketCap. The goal is to build a structured dataset including project links, GitHub repositories, and first token trading dates, to support deeper analysis of open-source crypto ecosystems with github activities and different funding models. 
 
 ---
 
@@ -18,7 +18,7 @@ This repo contains Python scripts to extract and compile metadata for cryptocurr
 
 3. **Extract Website and Social Links**  
    📄 `extract_all_links.py`  
-   - Extracts and classifies all links on each coin’s page: GitHub, official website, Twitter, Reddit, etc.
+   - Extracts all available external links from each coin’s CoinMarketCap page (website, GitHub, whitepaper, explorers, etc.).
    - Saves to: `your output file`
 
 4. **Merge Metadata with OSS Info**  
@@ -56,3 +56,9 @@ This repo contains Python scripts to extract and compile metadata for cryptocurr
 Install with:
 ```bash
 pip install -r requirements.txt
+
+## Notes
+
+- For heavy scraping (over hundreds of coins), you may want to add random sleep intervals and use checkpoint saving to avoid losing progress.
+- Coin names may not always match OSS GitHub repositories directly, so link classification is essential.
+- Selenium scripts can be resource-intensive; ensure ChromeDriver is up-to-date.
