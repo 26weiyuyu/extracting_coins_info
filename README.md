@@ -7,22 +7,22 @@ This repository contains a suite of Python scripts for scraping, classifying, an
 ## Project Workflow
 
 1. **Scrape CoinMarketCap Coin List**  
-   📄 `scrape_coin_list.py`  
+   `scrape_coin_list.py`  
    - Extracts coin names and their CoinMarketCap links.
    - Saves to: `your output file`
 
 2. **Get First Token Trading Date**  
-   📄 `scrape_token_dates.py`  
+   `scrape_token_dates.py`  
    - Uses Selenium to hover over CoinMarketCap charts and find the first date with price data.
    - Saves to: `your output file`
 
 3. **Extract Website and Social Links**  
-   📄 `extract_all_links.py`  
+   `extract_all_links.py`  
    - Extracts all available external links from each coin’s CoinMarketCap page (website, GitHub, whitepaper, explorers, etc.).
    - Saves to: `your output file`
 
 4. **Merge Metadata with OSS Info**  
-   📄 `merge_project_data.py`  
+   `merge_project_data.py`  
    - Combines token dates, CoinMarketCap metadata, and GitHub OSS links into one final file.
    - Saves to: `your output file`
 
